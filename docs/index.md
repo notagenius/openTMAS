@@ -45,5 +45,5 @@ the visualization of predicted lung segmentation from deep learning based U-Net 
 This project is under the Supervision of Tim G.
 ![Tim](./tim.png) [Tim, our supervisor]
 
-📧 marcel.ochsendorf@gmail.com
+contact us: marcel.ochsendorf@gmail.com
 
