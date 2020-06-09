@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-Welcome to Marcel and Weiling's openTMAS project progress page.
+Welcome to **openTMAS** project progress page.
 
 * * *
 
