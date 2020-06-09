@@ -5,7 +5,8 @@ layout: default
 ## Dataset Research
   - X-Ray
     - general conditions
-|   Index     | Dataset     | Comment  | Size | Resolution | Samples|Link          |
+  
+|   index     | dataset     | note  | site | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|
 |1| Pulmonary Chest Xray Abnormalities   | Chest, PNG, X-ray, partly with mask patly not with mask, HD, with seperate txt to state "gender", "age", "normal/abnormal" |  4.1GB | >3000px |139(with mask) + 663(without mask)|[https://www.kaggle.com/kmader/pulmonary-chest-xray-abnormalities](https://www.kaggle.com/kmader/pulmonary-chest-xray-abnormalities) | 
 |2| Lung segmentation from Chest X-Ray dataset   | the same with previous dataset but all masked |  9.6GB | >3000px | 346(abnormal) + 358(normal) |[https://www.kaggle.com/nikhilpandey360/chest-xray-masks-and-labels](https://www.kaggle.com/nikhilpandey360/chest-xray-masks-and-labels) | 

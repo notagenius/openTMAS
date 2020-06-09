@@ -6,7 +6,7 @@ layout: default
   - X-Ray
     - covid related
 
-|   Index     | Dataset     | Comment  | Size | Resolution | Samples|Link          |
+|   index     | dataset     | note  | site | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|
 |1| Chest Xray Pneumonia      | Normal and Pneumonia  |  2.4GB | >800px |11,742|[https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) | 
 |2| Pneumonia Xray Dataset      |  Normal and SARS/MERS/COVID only labelled with Normal and Pneumonia |  88.4M | >1000px |192 |[https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets/activity](https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets/activity) |
