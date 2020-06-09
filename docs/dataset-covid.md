@@ -7,6 +7,10 @@ layout: default
 ## Dataset Research
   - X-Ray
     - covid related
+  
+author: Weiling
+
+updated on: 27 May 2020
 
 |   index     | dataset     | note  | site | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|

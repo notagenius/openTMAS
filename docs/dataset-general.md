@@ -8,6 +8,10 @@ layout: default
   - X-Ray
     - general conditions
   
+author: Weiling
+
+updated on: 27 May 2020
+  
 |   index     | dataset     | note  | site | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|
 |1| pulmonary chest x-ray abnormalities   | chest, png, x-ray, partly with mask patly not with mask, hd, with seperate txt to state "gender", "age", "normal/abnormal" |  4.1GB | >3000px |139(with mask) + 663(without mask)|[https://www.kaggle.com/kmader/pulmonary-chest-xray-abnormalities](https://www.kaggle.com/kmader/pulmonary-chest-xray-abnormalities) | 
