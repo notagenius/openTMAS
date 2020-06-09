@@ -25,7 +25,7 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
 - Artificial Intelligence Study 
   - Lung Segmentation
     - Algorithms ✔️ [Link to our report](./segmentation.html) (updated on 02 June 2020)
-    - Experiment Round 1 with Implementation ✔️ [Link to our report] ((updated on 02 June 2020))
+    - Experiment Round 1 with implementing UNet ✔️ [Link to our code]() (updated on 02 June 2020)
   - Lung Reconstruction
     - Algorithms
   - Lung Image Classification / Regression
@@ -34,6 +34,9 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
   - Frontend UI Design  ✔️
   - Backend Endpoint Design
 
+### Round 1 Segmentation Result
+
+![segmentation](./seg_round_1.png)
 
 ### Note For Our Codebase
 
