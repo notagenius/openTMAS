@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-Welcome to **openTMAS** project progress page.
+Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progress page.
 
 * * *
 
