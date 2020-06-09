@@ -2,14 +2,14 @@
 layout: default
 ---
 
-Welcome to Marcel and Weiling's openTMAS project page.
+Welcome to Marcel and Weiling's openTMAS project progress page.
 
 ### Progress (May - June):
 
 - Dataset Research
   - X-Ray
-    - covid related :heavy_check_mark: [Link to result](./dataset-covid.html)
-    -general conditions :heavy_check_mark: [Link to result](./dataset-general.html)
+    - covid related :white_check_mark: [Link to result](./dataset-covid.html)
+    -general conditions :white_check_mark: [Link to result](./dataset-general.html)
 - level 1 item
   - level 2 item
   - level 2 item
