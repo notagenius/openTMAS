@@ -8,8 +8,8 @@ Welcome to Marcel and Weiling's openTMAS project page.
 
 - Dataset Research
   - X-Ray
-    - [x] covid related  [Link to result](./dataset-covid.html)
-    - [x] general conditions [Link to result](./dataset-general.html)
+    - covid related :heavy_check_mark: [Link to result](./dataset-covid.html)
+    -general conditions :heavy_check_mark: [Link to result](./dataset-general.html)
 - level 1 item
   - level 2 item
   - level 2 item
