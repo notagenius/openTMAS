@@ -18,7 +18,7 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
   - read covid case on Sirm [Link to cases](https://www.sirm.org/2020/05/31/covid-19-caso-115/) (in Italian, translator needed)
 - Artificial Intelligence Study 
   - Lung Segmentation
-    - Algorithms ✔️ [Link to our report](./segmention.html) (updated on 02 June 2020)
+    - Algorithms ✔️ [Link to our report](./segmentation.html) (updated on 02 June 2020)
     - Experiment Round 1 with Implementation ✔️ [Link to our report] ((updated on 02 June 2020))
   - Lung Reconstruction
     - Algorithms ✔️ [Link to our report](./reconstruction.html) ((updated on 01 June 2020))
