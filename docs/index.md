@@ -4,23 +4,28 @@ layout: default
 
 Welcome to Marcel and Weiling's openTMAS project progress page.
 
-### Progress (May - June):
+* * *
+
+### Progress Map (May - June):
 
 - Dataset Research
   - X-Ray
-    - covid related ✔️ [Link to result](./dataset-covid.html)
-    - general conditions ✔️ [Link to result](./dataset-general.html)
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+    - covid related ✔️ [Link to result](./dataset-covid.html) (updated on 27 May 2020)
+    - general conditions ✔️ (May 2020) [Link to result](./dataset-general.html) (updated on 27 May 2020)
+- Artificial Intellegence  
+  - Lung Segmentation
+    - Algorithms ✔️ (updated on 02 June 2020)
+    - Experiment Round 1 ✔️ ((updated on 02 June 2020))
+  - Lung Reconstruction
+    - Algorithms ✔️ ((updated on 01 June 2020))
+  - Lung Image Classification / Regression
+    - Algorithms ✔️ ((updated on 01 June 2020))
+- Web App
+  - Frontend UI Design  ✔️
+  - Backend Endpoint Design
 
 
-### Header 3
+### Note
 
 ```js
 // Javascript code with syntax highlighting.
