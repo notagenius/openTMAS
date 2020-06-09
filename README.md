@@ -1,6 +1,8 @@
-# openTMAS
-summer 2020 ongoing opensourced project by Marcel & Weiling
-progress pages:
+in the summer 2020, Marcel & Weiling is doing a ongoing fully-opensourced project *openTMAS*
+
+we aim to apply proper research, implementation, webapp production designing to a medical image analysis system.
+
+for more details and progress please visit our progress pages:
 https://notagenius.github.io/openTMAS/
 
 # License
