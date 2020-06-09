@@ -10,47 +10,54 @@ author: Marcel
 
 updated on: 05 June 2020
 
-### U-Net: Convolutional Networks for Biomedical
-Image Segmentation
+### 1. U-Net: Convolutional Networks for Biomedical Image Segmentation
 ![U-Net](https://www.researchgate.net/publication/330447445/figure/fig1/AS:716054686863360@1547732149112/Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the.png)
 
-[Link to main paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_Unet.pdf)
+[Link to U-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_Unet.pdf)
 
-Note: accuracy hits 92% when metadata is combined (I-CNN + Weight + Age + Gender + Height)
+> note: accuracy hits 92% when metadata is combined (I-CNN + Weight + Age + Gender + Height)
 
-reference papers with evaluation:
 
-[Deep Learning Algorithms with Demographic Information Help to Detect Tuberculosis in Chest Radiographs in Annual Workers’ Health Examination Data}(https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_Deep_Learning_Algorithms_with_Demographic_Informat.pdf)
-
-### UNet++: Redesigning Skip Connections to Exploit
+### 2. UNet++: Redesigning Skip Connections to Exploit
 Multiscale Features in Image Segmentation
 
 ![U-Net-Plus-Plus-Architecture](https://images1.programmersought.com/77/da/da3782164485682b7335725784c3ee55.png)
 
-[Link to main paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_UNetplusplus.pdf)
+[Link to UNet++ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNetplusplus.pdf)
 
-note: Lung images segmentation is one of the applications in paper.
+> note: Lung images segmentation is one of the applications in paper.
 
-### CE-Net: Context Encoder Network for 2D Medical Image Segmentation
+### 3. CE-Net: Context Encoder Network for 2D Medical Image Segmentation
 
 ![CENET-Architecture](./cenet.jpeg)
 
-[Link to main paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_CENet.pdf)
+[Link to CE-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_CENet.pdf)
 
-Note: Paper is released under the tasks of Electron Microscope Images.
+> note: Paper is released under the tasks of Electron Microscope Images.
 
-### HyperDense-Net: A hyper-densely connected CNN for multi-modal image segmentation
+### 4. HyperDense-Net: A hyper-densely connected CNN for multi-modal image segmentation
 
-[Link to main paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_HyperDenseNet.pdf)
+[Link to Hyper-Dense-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_HyperDenseNet.pdf)
 
-note: state-of-the-art segmentation algorithms of Brain MRI images
+> note: state-of-the-art segmentation algorithms of Brain MRI images
 
-### Multi-scale self-guided attention for medical image segmentation
+### 5. Multi-scale self-guided attention for medical image segmentation
 
 ![ms_dual](./Ms_dual.png)
 
-[Link to main paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/segmentation_MsDual.pdf)
+[Link to MS-Dual paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_MsDual.pdf)
 
-note: state-of-the-art on Abdominal CT and MRI segmetation.
+> note: state-of-the-art on Abdominal CT and MRI segmetation.
+
+### 6. V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation
+
+![vnet](./vnet.png)
+
+[Link to V-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_VNet.pdf)
+
+> note:one of the application is on 343 chest CT scans and vnet was took as baseline as following figure
+
+![vnet](./vnetasbaseline.png)
+
 
 [back to main page](./)
