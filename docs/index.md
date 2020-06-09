@@ -12,7 +12,7 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
   - X-Ray
     - covid related ✔️ [Link to result](./dataset-covid.html) (updated on 27 May 2020)
     - general conditions ✔️ (May 2020) [Link to result](./dataset-general.html) (updated on 27 May 2020)
-- Artificial Intellegence  
+- Artificial Intelligence  
   - Lung Segmentation
     - Algorithms ✔️ (updated on 02 June 2020)
     - Experiment Round 1 ✔️ ((updated on 02 June 2020))
