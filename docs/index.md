@@ -53,7 +53,7 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 * * *
 The team includes 
 ![Marcel](./marcel.png) [[Marcel, the developer and designer]](https://github.com/RBEGamer) ![Weiling](./weiling.png) [[Weiling, the data scientist]](https://github.com/notagenius) and this project is under the supervision of Tim.
-![Tim](./tim.png) [Tim, our supervisor]
+![Tim](./tim.png) [Tim, experienced manager of digitization]
 
 
 
