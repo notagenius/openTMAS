@@ -27,16 +27,16 @@ SEGMENTATION_AUG_DIR = os.path.join(SEGMENTATION_TRAIN_DIR, "augmentation")
 SEGMENTATION_IMAGE_DIR = os.path.join(SEGMENTATION_TRAIN_DIR, "image")
 SEGMENTATION_MASK_DIR = os.path.join(SEGMENTATION_TRAIN_DIR, "mask")
 SEGMENTATION_DILATE_DIR = os.path.join(SEGMENTATION_TRAIN_DIR, "dilate")
-SEGMENTATION_SOURCE_DIR = os.path.join(INPUT_DIR,                                        "pulmonary-chest-xray-abnormalities")
+SEGMENTATION_SOURCE_DIR = os.path.join(INPUT_DIR, "pulmonary-chest-xray-abnormalities")
 
-SHENZHEN_TRAIN_DIR = os.path.join(SEGMENTATION_SOURCE_DIR, "ChinaSet_AllFiles",                                   "ChinaSet_AllFiles")
+SHENZHEN_TRAIN_DIR = os.path.join(SEGMENTATION_SOURCE_DIR, "ChinaSet_AllFiles", "ChinaSet_AllFiles")
 SHENZHEN_IMAGE_DIR = os.path.join(SHENZHEN_TRAIN_DIR, "CXR_png")
 SHENZHEN_MASK_DIR = os.path.join(INPUT_DIR, "shcxr-lung-mask", "mask", "mask")
 
-MONTGOMERY_TRAIN_DIR = os.path.join(SEGMENTATION_SOURCE_DIR,                                     "Montgomery", "MontgomerySet")
+MONTGOMERY_TRAIN_DIR = os.path.join(SEGMENTATION_SOURCE_DIR, "Montgomery", "MontgomerySet")
 MONTGOMERY_IMAGE_DIR = os.path.join(MONTGOMERY_TRAIN_DIR, "CXR_png")
-MONTGOMERY_LEFT_MASK_DIR = os.path.join(MONTGOMERY_TRAIN_DIR,                                         "ManualMask", "leftMask")
-MONTGOMERY_RIGHT_MASK_DIR = os.path.join(MONTGOMERY_TRAIN_DIR,                                          "ManualMask", "rightMask")
+MONTGOMERY_LEFT_MASK_DIR = os.path.join(MONTGOMERY_TRAIN_DIR, "ManualMask", "leftMask")
+MONTGOMERY_RIGHT_MASK_DIR = os.path.join(MONTGOMERY_TRAIN_DIR, "ManualMask", "rightMask")
 
 DILATE_KERNEL = np.ones((15, 15), np.uint8)
 
@@ -51,74 +51,74 @@ montgomery_test = montgomery_left_mask_dir[0:50]
 montgomery_train= montgomery_left_mask_dir[50:]
 
 for left_image_file in tqdm(montgomery_left_mask_dir):
-    base_file = os.path.basename(left_image_file)
-    image_file = os.path.join(MONTGOMERY_IMAGE_DIR, base_file)
-    right_image_file = os.path.join(MONTGOMERY_RIGHT_MASK_DIR, base_file)
+ base_file = os.path.basename(left_image_file)
+ image_file = os.path.join(MONTGOMERY_IMAGE_DIR, base_file)
+ right_image_file = os.path.join(MONTGOMERY_RIGHT_MASK_DIR, base_file)
 
-    image = cv2.imread(image_file)
-    left_mask = cv2.imread(left_image_file, cv2.IMREAD_GRAYSCALE)
-    right_mask = cv2.imread(right_image_file, cv2.IMREAD_GRAYSCALE)
-    
-    image = cv2.resize(image, (512, 512))
-    left_mask = cv2.resize(left_mask, (512, 512))
-    right_mask = cv2.resize(right_mask, (512, 512))
-    
-    mask = np.maximum(left_mask, right_mask)
-    mask_dilate = cv2.dilate(mask, DILATE_KERNEL, iterations=1)
-    
-    if (left_image_file in montgomery_train):
-        cv2.imwrite(os.path.join(SEGMENTATION_IMAGE_DIR, base_file),                     image)
-        cv2.imwrite(os.path.join(SEGMENTATION_MASK_DIR, base_file),                     mask)
-        cv2.imwrite(os.path.join(SEGMENTATION_DILATE_DIR, base_file),                     mask_dilate)
-    else:
-        filename, fileext = os.path.splitext(base_file)
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, base_file),                     image)
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_mask%s" % (filename, fileext)), mask)
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_dilate%s" % (filename, fileext)), mask_dilate)
+ image = cv2.imread(image_file)
+ left_mask = cv2.imread(left_image_file, cv2.IMREAD_GRAYSCALE)
+ right_mask = cv2.imread(right_image_file, cv2.IMREAD_GRAYSCALE)
+ 
+ image = cv2.resize(image, (512, 512))
+ left_mask = cv2.resize(left_mask, (512, 512))
+ right_mask = cv2.resize(right_mask, (512, 512))
+ 
+ mask = np.maximum(left_mask, right_mask)
+ mask_dilate = cv2.dilate(mask, DILATE_KERNEL, iterations=1)
+ 
+ if (left_image_file in montgomery_train):
+ cv2.imwrite(os.path.join(SEGMENTATION_IMAGE_DIR, base_file), image)
+ cv2.imwrite(os.path.join(SEGMENTATION_MASK_DIR, base_file), mask)
+ cv2.imwrite(os.path.join(SEGMENTATION_DILATE_DIR, base_file), mask_dilate)
+ else:
+ filename, fileext = os.path.splitext(base_file)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, base_file), image)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, "%s_mask%s" % (filename, fileext)), mask)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, "%s_dilate%s" % (filename, fileext)), mask_dilate)
 
 
 def add_colored_dilate(image, mask_image, dilate_image):
-    mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
-    dilate_image_gray = cv2.cvtColor(dilate_image, cv2.COLOR_BGR2GRAY)
-    
-    mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
-    dilate = cv2.bitwise_and(dilate_image, dilate_image, mask=dilate_image_gray)
-    
-    mask_coord = np.where(mask!=[0,0,0])
-    dilate_coord = np.where(dilate!=[0,0,0])
+ mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
+ dilate_image_gray = cv2.cvtColor(dilate_image, cv2.COLOR_BGR2GRAY)
+ 
+ mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
+ dilate = cv2.bitwise_and(dilate_image, dilate_image, mask=dilate_image_gray)
+ 
+ mask_coord = np.where(mask!=[0,0,0])
+ dilate_coord = np.where(dilate!=[0,0,0])
 
-    mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
-    dilate[dilate_coord[0],dilate_coord[1],:] = [0,0,255]
+ mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
+ dilate[dilate_coord[0],dilate_coord[1],:] = [0,0,255]
 
-    ret = cv2.addWeighted(image, 0.7, dilate, 0.3, 0)
-    ret = cv2.addWeighted(ret, 0.7, mask, 0.3, 0)
+ ret = cv2.addWeighted(image, 0.7, dilate, 0.3, 0)
+ ret = cv2.addWeighted(ret, 0.7, mask, 0.3, 0)
 
-    return ret
+ return ret
 
 def add_colored_mask(image, mask_image):
-    mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
-    
-    mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
-    
-    mask_coord = np.where(mask!=[0,0,0])
+ mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
+ 
+ mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
+ 
+ mask_coord = np.where(mask!=[0,0,0])
 
-    mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
+ mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
 
-    ret = cv2.addWeighted(image, 0.7, mask, 0.3, 0)
+ ret = cv2.addWeighted(image, 0.7, mask, 0.3, 0)
 
-    return ret
+ return ret
 
 def diff_mask(ref_image, mask_image):
-    mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
-    
-    mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
-    
-    mask_coord = np.where(mask!=[0,0,0])
+ mask_image_gray = cv2.cvtColor(mask_image, cv2.COLOR_BGR2GRAY)
+ 
+ mask = cv2.bitwise_and(mask_image, mask_image, mask=mask_image_gray)
+ 
+ mask_coord = np.where(mask!=[0,0,0])
 
-    mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
+ mask[mask_coord[0],mask_coord[1],:]=[255,0,0]
 
-    ret = cv2.addWeighted(ref_image, 0.7, mask, 0.3, 0)
-    return ret
+ ret = cv2.addWeighted(ref_image, 0.7, mask, 0.3, 0)
+ return ret
 
 
 base_file = os.path.basename(montgomery_train[0])
@@ -131,7 +131,7 @@ image = cv2.imread(image_file)
 mask_image = cv2.imread(mask_image_file)
 dilate_image = cv2.imread(dilate_image_file)
 merged_image = add_colored_dilate(image, mask_image, dilate_image)
-                          
+ 
 fig, axs = plt.subplots(2, 4, figsize=(15, 8))
 
 axs[0, 0].set_title("X-Ray")
@@ -149,8 +149,8 @@ axs[0, 3].imshow(merged_image)
 base_file = os.path.basename(montgomery_test[0])
 filename, fileext = os.path.splitext(base_file)
 image_file = os.path.join(SEGMENTATION_TEST_DIR, base_file)
-mask_image_file = os.path.join(SEGMENTATION_TEST_DIR,                                "%s_mask%s" % (filename, fileext))
-dilate_image_file = os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_dilate%s" % (filename, fileext))
+mask_image_file = os.path.join(SEGMENTATION_TEST_DIR, "%s_mask%s" % (filename, fileext))
+dilate_image_file = os.path.join(SEGMENTATION_TEST_DIR, "%s_dilate%s" % (filename, fileext))
 
 image = cv2.imread(image_file)
 mask_image = cv2.imread(mask_image_file)
@@ -174,26 +174,26 @@ shenzhen_test = shenzhen_mask_dir[0:50]
 shenzhen_train= shenzhen_mask_dir[50:]
 
 for mask_file in tqdm(shenzhen_mask_dir):
-    base_file = os.path.basename(mask_file).replace("_mask", "")
-    image_file = os.path.join(SHENZHEN_IMAGE_DIR, base_file)
+ base_file = os.path.basename(mask_file).replace("_mask", "")
+ image_file = os.path.join(SHENZHEN_IMAGE_DIR, base_file)
 
-    image = cv2.imread(image_file)
-    mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
-        
-    image = cv2.resize(image, (512, 512))
-    mask = cv2.resize(mask, (512, 512))
-    mask_dilate = cv2.dilate(mask, DILATE_KERNEL, iterations=1)
-    
-    if (mask_file in shenzhen_train):
-        cv2.imwrite(os.path.join(SEGMENTATION_IMAGE_DIR, base_file),                     image)
-        cv2.imwrite(os.path.join(SEGMENTATION_MASK_DIR, base_file),                     mask)
-        cv2.imwrite(os.path.join(SEGMENTATION_DILATE_DIR, base_file),                     mask_dilate)
-    else:
-        filename, fileext = os.path.splitext(base_file)
+ image = cv2.imread(image_file)
+ mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
+ 
+ image = cv2.resize(image, (512, 512))
+ mask = cv2.resize(mask, (512, 512))
+ mask_dilate = cv2.dilate(mask, DILATE_KERNEL, iterations=1)
+ 
+ if (mask_file in shenzhen_train):
+ cv2.imwrite(os.path.join(SEGMENTATION_IMAGE_DIR, base_file), image)
+ cv2.imwrite(os.path.join(SEGMENTATION_MASK_DIR, base_file), mask)
+ cv2.imwrite(os.path.join(SEGMENTATION_DILATE_DIR, base_file), mask_dilate)
+ else:
+ filename, fileext = os.path.splitext(base_file)
 
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, base_file),                     image)
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_mask%s" % (filename, fileext)), mask)
-        cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_dilate%s" % (filename, fileext)), mask_dilate)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, base_file), image)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, "%s_mask%s" % (filename, fileext)), mask)
+ cv2.imwrite(os.path.join(SEGMENTATION_TEST_DIR, "%s_dilate%s" % (filename, fileext)), mask_dilate)
 
 
 
@@ -207,7 +207,7 @@ image = cv2.imread(image_file)
 mask_image = cv2.imread(mask_image_file)
 dilate_image = cv2.imread(dilate_image_file)
 merged_image = add_colored_dilate(image, mask_image, dilate_image)
-                          
+ 
 fig, axs = plt.subplots(2, 4, figsize=(15, 8))
 
 axs[0, 0].set_title("X-Ray")
@@ -225,12 +225,12 @@ axs[0, 3].imshow(merged_image)
 base_file = os.path.basename(shenzhen_test[0].replace("_mask", ""))
 image_file = os.path.join(SEGMENTATION_TEST_DIR, base_file)
 filename, fileext = os.path.splitext(base_file)
-mask_image_file = os.path.join(SEGMENTATION_TEST_DIR,                                "%s_mask%s" % (filename, fileext))
+mask_image_file = os.path.join(SEGMENTATION_TEST_DIR, "%s_mask%s" % (filename, fileext))
 
 filename, fileext = os.path.splitext(base_file)
 image_file = os.path.join(SEGMENTATION_TEST_DIR, base_file)
-mask_image_file = os.path.join(SEGMENTATION_TEST_DIR,                                "%s_mask%s" % (filename, fileext))
-dilate_image_file = os.path.join(SEGMENTATION_TEST_DIR,                                  "%s_dilate%s" % (filename, fileext))
+mask_image_file = os.path.join(SEGMENTATION_TEST_DIR, "%s_mask%s" % (filename, fileext))
+dilate_image_file = os.path.join(SEGMENTATION_TEST_DIR, "%s_dilate%s" % (filename, fileext))
 
 image = cv2.imread(image_file)
 mask_image = cv2.imread(mask_image_file)
@@ -255,179 +255,179 @@ test_files = glob(os.path.join(SEGMENTATION_TEST_DIR, "*.png"))
 mask_files = glob(os.path.join(SEGMENTATION_MASK_DIR, "*.png"))
 dilate_files = glob(os.path.join(SEGMENTATION_DILATE_DIR, "*.png"))
 
-(len(train_files),  len(test_files),  len(mask_files),  len(dilate_files))
+(len(train_files), len(test_files), len(mask_files), len(dilate_files))
 
 
 
 # Segmentation training
 
 def train_generator(batch_size, train_path, image_folder, mask_folder, aug_dict,
-        image_color_mode="grayscale",
-        mask_color_mode="grayscale",
-        image_save_prefix="image",
-        mask_save_prefix="mask",
-        save_to_dir=None,
-        target_size=(256,256),
-        seed=1):
+ image_color_mode="grayscale",
+ mask_color_mode="grayscale",
+ image_save_prefix="image",
+ mask_save_prefix="mask",
+ save_to_dir=None,
+ target_size=(256,256),
+ seed=1):
 
-    image_datagen = ImageDataGenerator(**aug_dict)
-    mask_datagen = ImageDataGenerator(**aug_dict)
-    
-    image_generator = image_datagen.flow_from_directory(
-        train_path,
-        classes = [image_folder],
-        class_mode = None,
-        color_mode = image_color_mode,
-        target_size = target_size,
-        batch_size = batch_size,
-        save_to_dir = save_to_dir,
-        save_prefix  = image_save_prefix,
-        seed = seed)
+ image_datagen = ImageDataGenerator(**aug_dict)
+ mask_datagen = ImageDataGenerator(**aug_dict)
+ 
+ image_generator = image_datagen.flow_from_directory(
+ train_path,
+ classes = [image_folder],
+ class_mode = None,
+ color_mode = image_color_mode,
+ target_size = target_size,
+ batch_size = batch_size,
+ save_to_dir = save_to_dir,
+ save_prefix = image_save_prefix,
+ seed = seed)
 
-    mask_generator = mask_datagen.flow_from_directory(
-        train_path,
-        classes = [mask_folder],
-        class_mode = None,
-        color_mode = mask_color_mode,
-        target_size = target_size,
-        batch_size = batch_size,
-        save_to_dir = save_to_dir,
-        save_prefix  = mask_save_prefix,
-        seed = seed)
+ mask_generator = mask_datagen.flow_from_directory(
+ train_path,
+ classes = [mask_folder],
+ class_mode = None,
+ color_mode = mask_color_mode,
+ target_size = target_size,
+ batch_size = batch_size,
+ save_to_dir = save_to_dir,
+ save_prefix = mask_save_prefix,
+ seed = seed)
 
-    train_gen = zip(image_generator, mask_generator)
-    
-    for (img, mask) in train_gen:
-        img, mask = adjust_data(img, mask)
-        yield (img,mask)
+ train_gen = zip(image_generator, mask_generator)
+ 
+ for (img, mask) in train_gen:
+ img, mask = adjust_data(img, mask)
+ yield (img,mask)
 
 def adjust_data(img,mask):
-    img = img / 255
-    mask = mask / 255
-    mask[mask > 0.5] = 1
-    mask[mask <= 0.5] = 0
-    
-    return (img, mask)
+ img = img / 255
+ mask = mask / 255
+ mask[mask > 0.5] = 1
+ mask[mask <= 0.5] = 0
+ 
+ return (img, mask)
 
 
 def dice_coef(y_true, y_pred):
-    y_true_f = keras.flatten(y_true)
-    y_pred_f = keras.flatten(y_pred)
-    intersection = keras.sum(y_true_f * y_pred_f)
-    return (2. * intersection + 1) / (keras.sum(y_true_f) + keras.sum(y_pred_f) + 1)
+ y_true_f = keras.flatten(y_true)
+ y_pred_f = keras.flatten(y_pred)
+ intersection = keras.sum(y_true_f * y_pred_f)
+ return (2. * intersection + 1) / (keras.sum(y_true_f) + keras.sum(y_pred_f) + 1)
 
 def dice_coef_loss(y_true, y_pred):
-    return -dice_coef(y_true, y_pred)
+ return -dice_coef(y_true, y_pred)
 
 def unet(input_size=(256,256,1)):
-    inputs = Input(input_size)
-    
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
+ inputs = Input(input_size)
+ 
+ conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)
+ conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
+ pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
 
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1)
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
+ conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1)
+ conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
+ pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
 
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2)
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv3)
-    pool3 = MaxPooling2D(pool_size=(2, 2))(conv3)
+ conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2)
+ conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv3)
+ pool3 = MaxPooling2D(pool_size=(2, 2))(conv3)
 
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(pool3)
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv4)
-    pool4 = MaxPooling2D(pool_size=(2, 2))(conv4)
+ conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(pool3)
+ conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv4)
+ pool4 = MaxPooling2D(pool_size=(2, 2))(conv4)
 
-    conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(pool4)
-    conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(conv5)
+ conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(pool4)
+ conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(conv5)
 
-    up6 = concatenate([Conv2DTranspose(256, (2, 2), strides=(2, 2), padding='same')(conv5), conv4], axis=3)
-    conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(up6)
-    conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv6)
+ up6 = concatenate([Conv2DTranspose(256, (2, 2), strides=(2, 2), padding='same')(conv5), conv4], axis=3)
+ conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(up6)
+ conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv6)
 
-    up7 = concatenate([Conv2DTranspose(128, (2, 2), strides=(2, 2), padding='same')(conv6), conv3], axis=3)
-    conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(up7)
-    conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv7)
+ up7 = concatenate([Conv2DTranspose(128, (2, 2), strides=(2, 2), padding='same')(conv6), conv3], axis=3)
+ conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(up7)
+ conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv7)
 
-    up8 = concatenate([Conv2DTranspose(64, (2, 2), strides=(2, 2), padding='same')(conv7), conv2], axis=3)
-    conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(up8)
-    conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv8)
+ up8 = concatenate([Conv2DTranspose(64, (2, 2), strides=(2, 2), padding='same')(conv7), conv2], axis=3)
+ conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(up8)
+ conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv8)
 
-    up9 = concatenate([Conv2DTranspose(32, (2, 2), strides=(2, 2), padding='same')(conv8), conv1], axis=3)
-    conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(up9)
-    conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv9)
+ up9 = concatenate([Conv2DTranspose(32, (2, 2), strides=(2, 2), padding='same')(conv8), conv1], axis=3)
+ conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(up9)
+ conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv9)
 
-    conv10 = Conv2D(1, (1, 1), activation='sigmoid')(conv9)
+ conv10 = Conv2D(1, (1, 1), activation='sigmoid')(conv9)
 
-    return Model(inputs=[inputs], outputs=[conv10])
+ return Model(inputs=[inputs], outputs=[conv10])
 
 
 def test_load_image(test_file, target_size=(256,256)):
-    img = cv2.imread(test_file, cv2.IMREAD_GRAYSCALE)
-    img = img / 255
-    img = cv2.resize(img, target_size)
-    img = np.reshape(img, img.shape + (1,))
-    img = np.reshape(img,(1,) + img.shape)
-    return img
+ img = cv2.imread(test_file, cv2.IMREAD_GRAYSCALE)
+ img = img / 255
+ img = cv2.resize(img, target_size)
+ img = np.reshape(img, img.shape + (1,))
+ img = np.reshape(img,(1,) + img.shape)
+ return img
 
 def test_generator(test_files, target_size=(256,256)):
-    for test_file in test_files:
-        yield test_load_image(test_file, target_size)
-        
+ for test_file in test_files:
+ yield test_load_image(test_file, target_size)
+ 
 def save_result(save_path, npyfile, test_files):
-    for i, item in enumerate(npyfile):
-        result_file = test_files[i]
-        img = (item[:, :, 0] * 255.).astype(np.uint8)
+ for i, item in enumerate(npyfile):
+ result_file = test_files[i]
+ img = (item[:, :, 0] * 255.).astype(np.uint8)
 
-        filename, fileext = os.path.splitext(os.path.basename(result_file))
+ filename, fileext = os.path.splitext(os.path.basename(result_file))
 
-        result_file = os.path.join(save_path, "%s_predict%s" % (filename, fileext))
+ result_file = os.path.join(save_path, "%s_predict%s" % (filename, fileext))
 
-        cv2.imwrite(result_file, img)
+ cv2.imwrite(result_file, img)
 
 
 def add_suffix(base_file, suffix):
-    filename, fileext = os.path.splitext(base_file)
-    return "%s_%s%s" % (filename, suffix, fileext)
+ filename, fileext = os.path.splitext(base_file)
+ return "%s_%s%s" % (filename, suffix, fileext)
 
-test_files = [test_file for test_file in glob(os.path.join(SEGMENTATION_TEST_DIR, "*.png"))               if ("_mask" not in test_file                   and "_dilate" not in test_file                   and "_predict" not in test_file)]
+test_files = [test_file for test_file in glob(os.path.join(SEGMENTATION_TEST_DIR, "*.png")) if ("_mask" not in test_file and "_dilate" not in test_file and "_predict" not in test_file)]
 
 validation_data = (test_load_image(test_files[0], target_size=(512, 512)),
-                    test_load_image(add_suffix(test_files[0], "dilate"), target_size=(512, 512)))
+ test_load_image(add_suffix(test_files[0], "dilate"), target_size=(512, 512)))
 
 len(test_files), len(validation_data)
 
 
 train_generator_args = dict(rotation_range=0.2,
-                            width_shift_range=0.05,
-                            height_shift_range=0.05,
-                            shear_range=0.05,
-                            zoom_range=0.05,
-                            horizontal_flip=True,
-                            fill_mode='nearest')
+ width_shift_range=0.05,
+ height_shift_range=0.05,
+ shear_range=0.05,
+ zoom_range=0.05,
+ horizontal_flip=True,
+ fill_mode='nearest')
 
 train_gen = train_generator(BATCH_SIZE,
-                            SEGMENTATION_TRAIN_DIR,
-                            'image',
-                            'dilate', 
-                            train_generator_args,
-                            target_size=(512,512),
-                            save_to_dir=os.path.abspath(SEGMENTATION_AUG_DIR))
+ SEGMENTATION_TRAIN_DIR,
+ 'image',
+ 'dilate', 
+ train_generator_args,
+ target_size=(512,512),
+ save_to_dir=os.path.abspath(SEGMENTATION_AUG_DIR))
 
 model = unet(input_size=(512,512,1))
-model.compile(optimizer=Adam(lr=1e-5), loss=dice_coef_loss,                   metrics=[dice_coef, 'binary_accuracy'])
+model.compile(optimizer=Adam(lr=1e-5), loss=dice_coef_loss, metrics=[dice_coef, 'binary_accuracy'])
 model.summary()
 
 model_checkpoint = ModelCheckpoint('unet_lung_seg.hdf5', 
-                                   monitor='loss', 
-                                   verbose=1, 
-                                   save_best_only=True)
+ monitor='loss', 
+ verbose=1, 
+ save_best_only=True)
 
 history = model.fit_generator(train_gen,
-                              steps_per_epoch=len(train_files) / BATCH_SIZE, 
-                              epochs=EPOCHS, 
-                              callbacks=[model_checkpoint],
-                              validation_data = validation_data)
+ steps_per_epoch=len(train_files) / BATCH_SIZE, 
+ epochs=EPOCHS, 
+ callbacks=[model_checkpoint],
+ validation_data = validation_data)
 
 
 fig, axs = plt.subplots(1, 2, figsize = (15, 4))
