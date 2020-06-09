@@ -6,5 +6,9 @@ layout: default
 
 ## Lung reconstruction algorithms
 
+author: Marcel
+
+updated on: 01 June 2020
+
 
 [back to main page](./)

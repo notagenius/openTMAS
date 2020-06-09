@@ -21,9 +21,9 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
     - Algorithms ✔️ [Link to our report](./segmentation.html) (updated on 02 June 2020)
     - Experiment Round 1 with Implementation ✔️ [Link to our report] ((updated on 02 June 2020))
   - Lung Reconstruction
-    - Algorithms ✔️ [Link to our report](./reconstruction.html) ((updated on 01 June 2020))
+    - Algorithms [Link to our report](./reconstruction.html) ((updated on 01 June 2020))
   - Lung Image Classification / Regression
-    - Algorithms ✔️ [Link to our report](./classification.html) (updated on 01 June 2020)
+    - Algorithms [Link to our report](./classification.html) (updated on 01 June 2020)
 - Web App
   - Frontend UI Design  ✔️
   - Backend Endpoint Design
