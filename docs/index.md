@@ -6,7 +6,7 @@ layout: default
 Welcome to Marcel and Weiling's openTMAS project progress page.
 
 
-![Marcel](./marcel.png) [Marcel, the developer and designer] ![Weiling](./weiling.png) [Weiling, the data scientist] 
+![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius)
 
 * * *
 
@@ -32,13 +32,15 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
   - Frontend UI Design ✔️
   - Backend Endpoint Design
 
+* * *
+
 ### Implementation Result
 
-the visualization of predicted lung segmentation of deep learning based U-Net implementation.
+the visualization of predicted lung segmentation from deep learning based U-Net implementation.
 
 ![segmentation](./seg_round_1.png)
 
-***
+* * *
 
 This project is under the Supervision of Tim G.
 ![Tim](./tim.png) [Tim, our supervisor] 
