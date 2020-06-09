@@ -8,8 +8,8 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
 
 - Dataset Research
   - X-Ray
-    - covid related :white_check_mark: [Link to result](./dataset-covid.html)
-    - general conditions :white_check_mark: [Link to result](./dataset-general.html)
+    - covid related ✔️ [Link to result](./dataset-covid.html)
+    - general conditions ✔️ [Link to result](./dataset-general.html)
 - level 1 item
   - level 2 item
   - level 2 item
