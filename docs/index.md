@@ -41,6 +41,11 @@ the visualization of predicted lung segmentation from deep learning based U-Net 
 ![segmentation](./seg_round_1.png)
 
 * * *
+### openTMAS Library
+
+[the papers we studied](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
+
+* * *
 
 This project is under the Supervision of Tim G.
 ![Tim](./tim.png) [Tim, our supervisor]
