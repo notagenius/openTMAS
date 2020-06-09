@@ -1,4 +1,4 @@
-in the summer 2020, Marcel & Weiling are developping a fully-opensourced project **openTMAS** _(Open-source Targeted Medical Images Analysis System)_
+in the summer 2020, Marcel & Weiling are developing a fully-opensourced project **openTMAS** _(Open-source Targeted Medical Images Analysis System)_
 
 we aim to apply proper research, implementation, webapp production designing to a medical image analysis system.
 
