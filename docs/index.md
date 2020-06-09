@@ -43,7 +43,15 @@ the visualization of predicted lung segmentation from deep learning based U-Net 
 * * *
 ### openTMAS Library
 
-[the papers we studied](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
+[the paper collection](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
+
+[Book: Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org/)
+
+[Book: Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
+
+Book: Pneumonia essentials by Burke A. Cunha
+
+Book: Chest Radiology: The Essentials by Jannette Collins MD MEd
 
 * * *
 
