@@ -52,8 +52,10 @@ book: Chest Radiology: The Essentials by Jannette Collins MD MEd
 
 * * *
 The team includes 
-![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius) and This project is under the Supervision of Tim G.
+![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius) and this project is under the supervision of Tim G.
 ![Tim](./tim.png) [Tim, our supervisor]
 
-contact us: marcel.ochsendorf@gmail.com
+
+
+contact us: marcel.ochsendorf@gmail.com aileen365@gmail.com
 
