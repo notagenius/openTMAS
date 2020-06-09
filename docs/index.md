@@ -7,7 +7,7 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 
 * * *
 
-### Progress Map (May - June):
+## Progress Map (May - June):
 
 - Dataset Research
   - X-Ray
@@ -31,14 +31,14 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 
 * * *
 
-### Implementation Result
+## Implementation Result
 
-the visualization of predicted lung segmentation from deep learning based U-Net implementation.
+(updated on May 2020) the visualization of predicted lung segmentation from deep learning based U-Net implementation.[code](https://github.com/notagenius/openTMAS/blob/master/segmentation/seg.py)
 
 ![segmentation](./seg_round_1.png)
 
 * * *
-### openTMAS Library
+## openTMAS Library
 
 [the paper collection](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
 
