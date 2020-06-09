@@ -12,6 +12,10 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
   - X-Ray
     - covid related ✔️ [Link to result](./dataset-covid.html) (updated on 27 May 2020)
     - general conditions ✔️ (May 2020) [Link to result](./dataset-general.html) (updated on 27 May 2020)
+- Medical Learning Schedule 
+  - radiopaedia 2020 4-day vitual conference  Chest Images on Day 2 [Link to conference schedule](https://radiopaedia.org/courses/radiopaedia-2020-virtual-conference#day2) (23 June)
+  - read covid cases on eurorad [Link to cases](https://www.eurorad.org/advanced-search?search=COVID)
+  - read covid case on sirm[link to cases](https://www.sirm.org/2020/05/31/covid-19-caso-115/) (in Italian, translator needed)
 - Artificial Intelligence  
   - Lung Segmentation
     - Algorithms ✔️ (updated on 02 June 2020)
