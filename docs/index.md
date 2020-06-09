@@ -2,7 +2,13 @@
 layout: default
 ---
 
+
 Welcome to Marcel and Weiling's openTMAS project progress page.
+
+
+![Marcel](./marcel.png) [Marcel, the developer and designer] 
+
+![Weiling](./weiling.png) [Weiling, the data scientist] 
 
 * * *
 
@@ -21,9 +27,9 @@ Welcome to Marcel and Weiling's openTMAS project progress page.
     - Algorithms ✔️ [Link to our report](./segmentation.html) (updated on 02 June 2020)
     - Experiment Round 1 with Implementation ✔️ [Link to our report] ((updated on 02 June 2020))
   - Lung Reconstruction
-    - Algorithms [Link to our report](./reconstruction.html) ((updated on 01 June 2020))
+    - Algorithms
   - Lung Image Classification / Regression
-    - Algorithms [Link to our report](./classification.html) (updated on 01 June 2020)
+    - Algorithms
 - Web App
   - Frontend UI Design  ✔️
   - Backend Endpoint Design
@@ -46,21 +52,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-### Small image
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+under the Supervision of Tim G.
+![Tim](./tim.png) [Tim, our supervisor] 
 
-### Process Design
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
