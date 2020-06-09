@@ -5,9 +5,6 @@ layout: default
 
 Welcome to Marcel and Weiling's openTMAS project progress page.
 
-
-![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius)
-
 * * *
 
 ### Progress Map (May - June):
@@ -54,8 +51,8 @@ Book: Pneumonia essentials by Burke A. Cunha
 Book: Chest Radiology: The Essentials by Jannette Collins MD MEd
 
 * * *
-
-This project is under the Supervision of Tim G.
+The team includes 
+![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius) and This project is under the Supervision of Tim G.
 ![Tim](./tim.png) [Tim, our supervisor]
 
 contact us: marcel.ochsendorf@gmail.com
