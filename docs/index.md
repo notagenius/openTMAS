@@ -33,7 +33,7 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 
 ## Implementation Result
 
-(updated on May 2020) the visualization of predicted lung segmentation from deep learning based U-Net implementation.[code](https://github.com/notagenius/openTMAS/blob/master/segmentation/seg.py)
+*   (updated on May 2020) the visualization of predicted lung segmentation from deep learning based U-Net implementation. [[code]](https://github.com/notagenius/openTMAS/blob/master/segmentation/seg.py)
 
 ![segmentation](./seg_round_1.png)
 
@@ -52,7 +52,7 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 
 * * *
 The team includes 
-![Marcel](./marcel.png) [Marcel, the developer and designer](https://github.com/RBEGamer) ![Weiling](./weiling.png) [Weiling, the data scientist](https://github.com/notagenius) and this project is under the supervision of Tim.
+![Marcel](./marcel.png) [[Marcel, the developer and designer]](https://github.com/RBEGamer) ![Weiling](./weiling.png) [[Weiling, the data scientist]](https://github.com/notagenius) and this project is under the supervision of Tim.
 ![Tim](./tim.png) [Tim, our supervisor]
 
 
