@@ -40,15 +40,15 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 * * *
 ## openTMAS Library
 
-[the paper collection](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
+*   [the paper collection](https://github.com/notagenius/openTMAS/tree/master/docs/papers)
 
-[book: Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org/)
+*   [book: Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org/)
 
-[book: Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
+*   [book: Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
 
-book: Pneumonia essentials by Burke A. Cunha
+*   book: Pneumonia essentials by Burke A. Cunha
 
-book: Chest Radiology: The Essentials by Jannette Collins MD MEd
+*   book: Chest Radiology: The Essentials by Jannette Collins MD MEd
 
 * * *
 The team includes 
@@ -57,5 +57,7 @@ The team includes
 
 
 
-contact us: marcel.ochsendorf@gmail.com aileen365@gmail.com
+contact us: 
+*   marcel.ochsendorf@gmail.com
+*   aileen365@gmail.com
 
