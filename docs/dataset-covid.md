@@ -12,7 +12,7 @@ layout: default
 
 *   updated on: 27 May 2020
 
-|   index     | dataset     | note  | site | res | samples |link          |
+|   index     | dataset     | note  | size | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|
 |1| chest x-ray pneumonia      | normal and pneumonia  |  2.4GB | >800px |11,742|[https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) | 
 |2| pneumonia x-ray dataset      |  normal and sars / mers / covid only labelled with normal and pneumonia |  88.4M | >1000px | 192 |[https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets/activity](https://www.kaggle.com/khoongweihao/covid19-xray-dataset-train-test-sets/activity) |
