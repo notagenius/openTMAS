@@ -7,7 +7,7 @@ Welcome to [**openTMAS**](https://github.com/notagenius/openTMAS) project progre
 
 * * *
 
-## Progress Map (May - June):
+## Progress Milestones (May - June):
 
 - Dataset Research
   - X-Ray
@@ -60,4 +60,6 @@ The team includes
 contact us: 
 *   marcel.ochsendorf@gmail.com
 *   aileen365@gmail.com
+
+© 2020. All rights reserved.
 
