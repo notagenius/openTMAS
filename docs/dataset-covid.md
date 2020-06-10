@@ -8,9 +8,9 @@ layout: default
   - X-Ray
     - covid related
   
-author: Weiling
+*   author: Weiling
 
-updated on: 27 May 2020
+*   updated on: 27 May 2020
 
 |   index     | dataset     | note  | site | res | samples |link          |
 | --------- |:----------:|:----------:|:----------:|:----------:|:----------:| -----:|

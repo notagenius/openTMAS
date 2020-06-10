@@ -6,16 +6,16 @@ layout: default
 
 ## Lung segmentation algorithms
 
-author: Marcel
+*   author: Marcel
 
-updated on: 05 June 2020
+*   updated on: 05 June 2020
 
 ### 1. U-Net: Convolutional Networks for Biomedical Image Segmentation [May 2015]
 ![U-Net](https://www.researchgate.net/publication/330447445/figure/fig1/AS:716054686863360@1547732149112/Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the.png)
 
 ![unet-Architecture](./unet.png)
 
-[Link to U-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_Unet.pdf)
+*   [Link to U-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_Unet.pdf)
 
 > note: accuracy hits 92% when metadata is combined (I-CNN + Weight + Age + Gender + Height)
 
@@ -25,7 +25,7 @@ Multiscale Features in Image Segmentation
 
 ![U-Net-Plus-Plus-Architecture](https://images1.programmersought.com/77/da/da3782164485682b7335725784c3ee55.png)
 
-[Link to UNet++ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNetplusplus.pdf)
+*   [Link to UNet++ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNetplusplus.pdf)
 
 > note: Lung images segmentation is one of the applications in paper.
 
@@ -33,13 +33,13 @@ Multiscale Features in Image Segmentation
 
 ![CENET-Architecture](./cenet.jpeg)
 
-[Link to CE-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_CENet.pdf)
+*   [Link to CE-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_CENet.pdf)
 
 > note: Paper is released under the tasks of Electron Microscope Images.
 
 ### 4. HyperDense-Net: A hyper-densely connected CNN for multi-modal image segmentation [April 2018]
 
-[Link to Hyper-Dense-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_HyperDenseNet.pdf)
+*   [Link to Hyper-Dense-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_HyperDenseNet.pdf)
 
 > note: state-of-the-art segmentation algorithms of Brain MRI images
 
@@ -47,7 +47,7 @@ Multiscale Features in Image Segmentation
 
 ![ms_dual](./Ms_dual.png)
 
-[Link to MS-Dual paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_MsDual.pdf)
+*   [Link to MS-Dual paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_MsDual.pdf)
 
 > note: state-of-the-art on Abdominal CT and MRI segmetation.
 
@@ -55,7 +55,7 @@ Multiscale Features in Image Segmentation
 
 ![vnet](./vnet.png)
 
-[Link to V-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_VNet.pdf)
+*   [Link to V-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_VNet.pdf)
 
 > note:one of the application is on 343 chest CT scans and vnet was took as baseline as following figure
 
@@ -65,7 +65,7 @@ Multiscale Features in Image Segmentation
 
 ![unet3+](./unet3plus.png)
 
-[Link to UNet3+ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNet3plus.pdf)
+*   [Link to UNet3+ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNet3plus.pdf)
 
 > note: using skip connection improvement over Unet++
 
