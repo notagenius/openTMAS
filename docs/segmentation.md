@@ -15,7 +15,7 @@ layout: default
 
 ![unet-Architecture](./unet.png)
 
-*   [Link to U-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_Unet.pdf)
+*   [Link to U-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNet.pdf)
 
 > note: accuracy hits 92% when metadata is combined (I-CNN + Weight + Age + Gender + Height)
 
