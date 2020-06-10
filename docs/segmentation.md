@@ -21,13 +21,12 @@ layout: default
 
 
 ### 2. UNet++: Redesigning Skip Connections to Exploit [Dec 2019]
-Multiscale Features in Image Segmentation
 
 ![U-Net-Plus-Plus-Architecture](https://images1.programmersought.com/77/da/da3782164485682b7335725784c3ee55.png)
 
 *   [Link to UNet++ paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_UNetplusplus.pdf)
 
-> note: Lung images segmentation is one of the applications in paper.
+> note: the paper addressed multiscale features in image segmentation well. lung images segmentation is one of the applications in paper.
 
 ### 3. CE-Net: Context Encoder Network for 2D Medical Image Segmentation [March 2019]
 
