@@ -56,11 +56,11 @@ layout: default
 
 *   [Link to V-Net paper](https://github.com/notagenius/openTMAS/tree/master/docs/papers/Segmentation_VNet.pdf)
 
-> note:one of the application is on 343 chest CT scans and vnet was took as baseline as following figure
+> note: one of the application is on 343 chest CT scans and vnet was took as baseline as following figure
 
 ![vnet](./vnetasbaseline.png)
 
-### 7. UNet 3+: A full-scale connected unet for medical image segmentation [Apr 2020]
+### 7. UNet 3+: A full-scale connected unet for medical image segmentation [April 2020]
 
 ![unet3+](./unet3plus.png)
 
